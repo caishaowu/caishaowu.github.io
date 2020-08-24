@@ -1164,7 +1164,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #3dffff;
+  background: #e3f9f9;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2453,4 +2453,40 @@ ul.breadcrumb li + li:last-child {
 }
 .links-of-blogroll-item {
   padding: 0;
+}
+.site-brand-container {
+  background: 0;
+}
+.header-inner {
+  background-image: linear-gradient(#e66465, #9198e5);
+}
+.headband {
+  height: 0px;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.post-body {
+  color: #333;
+}
+blockquote {
+  font-family: 'EB Garamond', 'STKaiti', 'KaiTi', 'SimKai', 'Noto Serif SC', sans-serif;
+}
+.sidebar-inner {
+  background-image: linear-gradient(#9198e5, #fff);
+}
+.sidebar-nav .sidebar-nav-active {
+  border-bottom-color: #fc6423;
+  color: #fc6423;
+}
+.content-wrap {
+  background-image: linear-gradient(#9198e5, #fff);
+}
+body {
+  background-image: linear-gradient(#000, #87ceeb);
+  background-size: auto;
 }
