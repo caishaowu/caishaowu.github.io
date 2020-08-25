@@ -24,12 +24,12 @@
   </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
+<meta property="og:title" content="icona">
 <meta property="og:url" content="http://yoursite.com/tags/index.html">
-<meta property="og:site_name" content="test">
+<meta property="og:site_name" content="icona">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-02-14T03:49:55.000Z">
-<meta property="article:modified_time" content="2020-02-14T03:49:55.705Z">
+<meta property="article:modified_time" content="2020-08-25T09:05:26.150Z">
 <meta property="article:author" content="Caisw ♥ Icona">
 <meta property="article:tag" content="icona">
 <meta name="twitter:card" content="summary">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>tags | test
+  <title>标签 | icona
   </title>
   
 
@@ -103,11 +103,11 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">test</span>
+        <span class="site-title">icona</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-        <p class="site-subtitle">记录</p>
+        <p class="site-subtitle">我们</p>
   </div>
 
   <div class="site-nav-right"></div>
@@ -129,12 +129,12 @@
   </li>
         <li class="menu-item menu-item-love">
 
-    <a href="/categories/love/" rel="section"><i class="fa fa-fw fa-heart"></i>test</a>
+    <a href="/categories/love/" rel="section"><i class="fa fa-fw fa-heart"></i>我们</a>
 
   </li>
         <li class="menu-item menu-item-photo">
 
-    <a href="/photo/" rel="section"><i class="fa fa-fw fa-image"></i>相册</a>
+    <a href="/photo/" rel="section"><i class="fa fa-fw fa-image"></i>旧时光</a>
 
   </li>
         <li class="menu-item menu-item-about">
@@ -172,7 +172,7 @@
     <div class="post-block" lang="zh-CN">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">tags
+<h1 class="post-title" itemprop="name headline">
 </h1>
 
 <div class="post-meta">
@@ -186,7 +186,142 @@
       
       
       <div class="post-body">
-          
+          <div class="tag-cloud">
+            <div class="tag-cloud-title">
+              目前共计 4 个标签
+            </div>
+            <div class="tag-cloud-tags" hidden>
+              <a href="/tags/2020/" style="font-size: 12px; color: #ccc">2020</a> <a href="/tags/%E6%83%85%E8%AF%9D/" style="font-size: 12px; color: #ccc">情话</a> <a href="/tags/%E6%99%9A%E5%AE%89/" style="font-size: 12px; color: #ccc">晚安</a> <a href="/tags/%E6%B5%AA%E6%BC%AB/" style="font-size: 12px; color: #ccc">浪漫</a>
+            </div>
+          </div>
+
+        
+        <style>
+
+  .love {
+      width: 500px;
+      height: 650px;
+      position: relative;
+      margin: 60px auto;
+  }
+
+  .love a {
+      position: absolute;
+      left: 0;
+      //color: goldenrod;
+      //color: #e804048f;
+      font-size: 20px;
+      font-family: sans-serif;
+      text-shadow: 0 0 1em white;
+      animation:
+          x-move 15s ease-in-out infinite alternate,
+          y-move 30s linear infinite;
+      animation-delay: calc(45s / var(--particles) * var(--n) * -1);
+      user-select: auto; // none
+  }
+
+  .love a:first-child {
+      color: orangered;
+      font-size: 3em;
+      text-shadow:
+          0 0 0.1em black,
+          0 0 1em white;
+      z-index: 1;
+  }
+
+  @keyframes x-move {
+      to {
+          left: 450px;
+      }
+  }
+
+  @keyframes y-move {
+      0% { transform: translateY(180px); }
+      10% { transform: translateY(45px); }
+      15% { transform: translateY(5px); }
+      18% { transform: translateY(0); }
+      20% { transform: translateY(5px); }
+      22% { transform: translateY(35px); }
+      24% { transform: translateY(65px); }
+      25% { transform: translateY(110px); }
+      26% { transform: translateY(65px); }
+      28% { transform: translateY(35px); }
+      30% { transform: translateY(5px); }
+      32% { transform: translateY(0); }
+      35% { transform: translateY(5px); }
+      40% { transform: translateY(45px); }
+      50% { transform: translateY(180px); }
+      71% { transform: translateY(430px); }
+      72.5% { transform: translateY(440px); }
+      75% { transform: translateY(450px); }
+      77.5% { transform: translateY(440px); }
+      79% { transform: translateY(430px); }
+      100% { transform: translateY(180px); }
+  }
+
+  /* 移动端样式 */
+  @media (max-width: 767px) {
+    .love{
+        width: 360px;
+        height: 450px;
+        margin: 30px auto;
+    }
+    @keyframes x-move {
+        to {
+            left: 285px;
+        }
+    }
+  }
+
+</style>
+
+<div class="love"></div>
+
+<script type="text/javascript">
+
+     var alltags = document.getElementsByClassName('tag-cloud-tags');
+     var tags = alltags[0].getElementsByTagName('a');
+
+     var words = ['❤️'];
+     for(var i = 0 ; i < tags.length ; i ++){
+       // words.push(tags[i].innerHTML)
+         words.push(tags[i])
+     }
+
+     var dom = {
+         love: document.querySelector('.love')
+     }
+
+     dom.love.style.setProperty('--particles', words.length)
+
+     words.forEach((word, i) => {
+
+         let atag = document.createElement('a');
+         atag.style.setProperty('--n', i + 1);
+
+         atag.style.setProperty('text-decoration', 'none');
+         atag.style.setProperty('border-bottom', 'none');
+
+         var r=Math.floor(Math.random()*75+130);
+         var g=Math.floor(Math.random()*75+100);
+         var b=Math.floor(Math.random()*75+80);
+         atag.style.setProperty("color", "rgb("+r+","+g+","+b+")");
+
+         atag.setAttribute("href", word.href);
+         atag.innerText = word.innerText;
+
+         if(word.href == undefined){
+            atag.setAttribute("href", "#");
+            atag.innerText = word;
+         }
+
+         dom.love.appendChild(atag);
+     })
+
+</script>
+
+
+        
       </div>
       
       
@@ -262,7 +397,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -270,10 +405,47 @@
         <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">分类</span>
       </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
   </nav>
 </div>
 
 
+<!-- none-select-br -->
+
+<p></p>
+
+<!-- hitokoto -->
+
+<div class="hitokoto-title">
+	<i class="fa fa-paragraph"></i>
+	<b>鸡汤</b>
+</div>
+
+<div id="hitokoto">:D 获取中...</div>
+<i id="hitofrom">:D 获取中...</i>
+
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(function (res){
+      return res.json();
+    })
+    .then(function (data) {
+      var hitokoto = document.getElementById('hitokoto');
+      hitokoto.innerText = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + data.hitokoto;
+      var hitofrom = document.getElementById('hitofrom');
+      hitofrom.innerText = "——" + data.from + '\xa0';
+    })
+    .catch(function (err) {
+      console.error(err);
+    })
+</script>
 
       </div>
 

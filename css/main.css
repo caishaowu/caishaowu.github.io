@@ -1164,7 +1164,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #e7fee2;
+  background: #aaff4b;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2489,4 +2489,24 @@ blockquote {
 body {
   background-image: linear-gradient(#000, #87ceeb);
   background-size: auto;
+}
+.site-author-name {
+  color: #808080;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+.hitokoto-title {
+  text-align: center;
+  font-size: 12px;
+}
+#hitokoto {
+  text-align: left;
+  font-family: "Microsoft YaHei";
+  font-size: 11px;
+}
+#hitofrom {
+  float: right;
+  font-family: "Microsoft YaHei";
+  font-size: 10px;
 }

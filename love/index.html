@@ -26,7 +26,7 @@
   <meta property="og:type" content="website">
 <meta property="og:title" content="love">
 <meta property="og:url" content="http://yoursite.com/love/index.html">
-<meta property="og:site_name" content="test">
+<meta property="og:site_name" content="icona">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-02-14T03:45:36.000Z">
 <meta property="article:modified_time" content="2020-02-14T07:07:25.122Z">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>love | test
+  <title>love | icona
   </title>
   
 
@@ -103,11 +103,11 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">test</span>
+        <span class="site-title">icona</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-        <p class="site-subtitle">记录</p>
+        <p class="site-subtitle">我们</p>
   </div>
 
   <div class="site-nav-right"></div>
@@ -129,12 +129,12 @@
   </li>
         <li class="menu-item menu-item-love">
 
-    <a href="/categories/love/" rel="section"><i class="fa fa-fw fa-heart"></i>test</a>
+    <a href="/categories/love/" rel="section"><i class="fa fa-fw fa-heart"></i>我们</a>
 
   </li>
         <li class="menu-item menu-item-photo">
 
-    <a href="/photo/" rel="section"><i class="fa fa-fw fa-image"></i>相册</a>
+    <a href="/photo/" rel="section"><i class="fa fa-fw fa-image"></i>旧时光</a>
 
   </li>
         <li class="menu-item menu-item-about">
@@ -262,7 +262,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -270,10 +270,47 @@
         <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">分类</span>
       </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
   </nav>
 </div>
 
 
+<!-- none-select-br -->
+
+<p></p>
+
+<!-- hitokoto -->
+
+<div class="hitokoto-title">
+	<i class="fa fa-paragraph"></i>
+	<b>鸡汤</b>
+</div>
+
+<div id="hitokoto">:D 获取中...</div>
+<i id="hitofrom">:D 获取中...</i>
+
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(function (res){
+      return res.json();
+    })
+    .then(function (data) {
+      var hitokoto = document.getElementById('hitokoto');
+      hitokoto.innerText = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + data.hitokoto;
+      var hitofrom = document.getElementById('hitofrom');
+      hitofrom.innerText = "——" + data.from + '\xa0';
+    })
+    .catch(function (err) {
+      console.error(err);
+    })
+</script>
 
       </div>
 
