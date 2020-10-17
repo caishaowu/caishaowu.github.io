@@ -35,7 +35,7 @@
 <meta property="og:image" content="http://yoursite.com/photo/+xmllink+">
 <meta property="og:image" content="http://yoursite.com/photo/+xmllink+">
 <meta property="article:published_time" content="2020-02-14T03:49:34.000Z">
-<meta property="article:modified_time" content="2020-09-03T04:00:32.828Z">
+<meta property="article:modified_time" content="2020-10-17T10:37:33.985Z">
 <meta property="article:author" content="Caisw ♥ Icona">
 <meta property="article:tag" content="icona">
 <meta name="twitter:card" content="summary">
@@ -248,7 +248,7 @@ xmlDoc=loadXMLDoc(xmllink);
 var urls=xmlDoc.getElementsByTagName('Key');
 var date=xmlDoc.getElementsByTagName('LastModified');
 var wid=(window.innerWidth*3)/18;
-var showNum=12; //每个相册一次展示多少照片
+var showNum=20; //每个相册一次展示多少照片
 
 var box=document.getElementById('box');
 var i=0;
@@ -282,7 +282,7 @@ for (var i = 0; i < content.length; i++) {
     for (var j = 1; j < content[i].length && j < showNum+1; j++) {
         var con=content[i][j].url;
         var item=document.createElement("li");
-        item.innerHTML="<div class=imgbox id=imgbox style=height:"+wid+"px;><img class=imgitem src="+xmllink+'/'+title+con+" alt="+con+"></div><span>"+con.substring(11,con.length-4)+"</span><p class=date>"+con.substring(0,10)+"</p>";
+        item.innerHTML="<div class=imgbox id=imgbox style=height:"+wid+"px;><img class=imgitem src="+xmllink+'/'+title+con+" alt="+con+"></div>";
         conBox.appendChild(item);
     }
     if(content[i].length > showNum){
@@ -308,7 +308,7 @@ function moreClick(obj,cur,cont,title){
         console.log( Number(showNum) + Number(begin));
         var con=cont[j].url;
         var item=document.createElement("li");
-        item.innerHTML="<div class=imgbox id=imgbox style=height:"+wid+"px;><img class=imgitem src="+xmllink+'/'+title+con+" alt="+con+"></div><span>"+con.substring(11,con.length-4)+"</span><p class=date>"+con.substring(0,10)+"</p>";
+        item.innerHTML="<div class=imgbox id=imgbox style=height:"+wid+"px;><img class=imgitem src="+xmllink+'/'+title+con+" alt="+con+"></div>";
         parent.appendChild(item);
     }
     if(cont.length > j){
@@ -412,7 +412,7 @@ function moreClick(obj,cur,cont,title){
       	type="playlist"
       	id="5165822225"
       	fixed="false"
-      	autoplay="true"
+      	autoplay="false"
       	order="list"
       	loop="all"
         list-folded= "true"
